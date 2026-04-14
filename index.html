@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Executive Board Meeting Minutes 4/13</title>
+        <link rel="author" href="mailto:akt014@ucsd.edu">
+    </head>
+
+    <body> 
+        
+        <header>
+            <h1>Executive Board Meeting Minutes</h1>
+            <p><strong>Date:</strong> <span style="color: blue;">April 13, 2023</span></p>
+            <h2>Purpose: Deciding on Q2 Goals</h2>
+        </header>
+    <hr>
+    <!-- Table of Contents: details + summary + nav -->
+    <details>
+        <summary>View Table of Contents</summary>
+        <nav>
+            <ul>
+                <li><a href="#attendance">Attendance</a></li>
+                <li><a href="#absent">Absent</a></li>
+                <li><a href="#agenda">Agenda</a></li>
+                <li><a href="#unfinished">Unfinished Business</a></li>
+                <li><a href="#new">New Business</a></li>
+                <li><a href="#discussion">Discussion and Questions</a></li>
+                <li><a href="#images">Image References</a></li>
+                <li><a href="#media">Video & Audio References</a></li>
+                <li><a href="#adjournment">Adjournment</a></li>
+            </ul>
+        </nav>
+    </details>
+    
+    <!--main-->
+        <main>
+            <!-- Attendance and Absences -->
+            <section class="attendance">
+                <h3>Attendance</h3>
+                <ul>
+                    <li>Amberly Truong - President <span style="color: red;">Present</span></li>
+                    <li>Jane Remover - Vice President <span style="color: red;">Present</span> </li>
+                    <li>Chiikawa - Treasurer <span style="color: red;">Present</span></li>
+                    <li>Toro - Secretary <span style="color: red;">Present</span></li>
+                </ul>
+            </section>
+
+            <section class="absent">
+                <h3>Absent</h3>
+                <ul>
+                    <li><i>None</i></li>
+                </ul>
+            </section>
+            
+            <!-- Agenda -->
+            <section>
+                <h3>Agenda</h3>
+                <ol>
+                    <li>Review of Q1 Goals</li>
+                    <li>Discussion of Q2 Goals</li>
+                    <li>Budget Allocation for Q2</li>
+                    <li>Planning for Upcoming Events</li>
+                </ol>
+            </section>
+
+            <!-- Meeting Notes -->
+            <section>
+                <h3>Unfinished Business</h3>
+                <ul>
+                    <li><strong>Review of Q1 Goals </strong></li>
+                    <b>Discussed:</b> <span style="color: blue;">The challenges faced in achieving the Q1 goals were discussed and reflected upon so the Q2 goals can be met more realistically.</span>
+                </ul>
+            </section>
+
+            <section>
+                <h3>New Business</h3>
+                <ul>
+                    <li>Discussion of Q2 Goals</li>
+                    <b>Discussed:</b> <span style="color: blue;">The board discussed potential goals for Q2, including increasing member engagement and organizing more community events.</span>
+                    <li>Budget Allocation for Q2</li>
+                    <b>Discussed:</b> <span style="color: blue;">The board reviewed the current budget and allocated funds for upcoming projects and events in Q2.</span>
+                    <li>Planning for Upcoming Events</li>
+                    <b>Discussed:</b> <span style="color: blue;">The board planned for several events in Q2, including a community outreach program and a fundraising event.</span>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Discussion and Questions</h3>
+                <ul>
+                    <li><b>Discussion:</b> <span style="color: blue;">The board had a discussion about potential challenges in achieving the Q2 goals and brainstormed solutions to overcome them.</span></li>
+                    <li><b>Questions:</b> <span style="color: blue;">Board members asked questions about the proposed goals and budget allocations, which were addressed by the respective members responsible for those areas.</span></li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Image References</h3>
+                <div style="display: flex; gap: 20px;">
+                <img src="media/Happyhappytoro.webp" alt="Happy Toro" width="200">
+                <img src="media/alsotoro.jpeg" alt="Chiikawa" width="200">
+                </div>
+            </section>
+
+            <section>
+                <h3>Video & Audio References</h3>
+                <label for="meetingVideo">Meeting Video:</label><br>
+                <video width="320" height="240" controls>
+                    <source src="media/89083E86-3D54-4708-9773-38469633720B_1_102_a.jpeg" type="video/jpeg">
+                    Your browser does not support the video tag.
+                </video>
+                <br><label for="meetingAudio">Meeting Audio:</label><br>
+                <audio controls>
+                    
+                    <source src="media/Clairo - Bags.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </section>
+            <section>
+                <h3>Adjournment</h3>
+                <p><span style="color: blue;">The meeting was adjourned at 3:00 PM.</span></p>
+            </section>
+        </main>
+
+        <!--Form -->
+        <!-- datalist, select, option, button-->
+        <form action="/submit" method="post">
+            <!--fieldset-->
+            <fieldset>
+                <legend>Feedback Form</legend>
+                <!--input-->
+                <p>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </p>
+                <!--input type="radio"-->
+                <p>
+                    Meeting Feedback:<br>
+                    <input type="radio" id="yes" name="feedback" value="yes">
+                    <label for="yes">Yes</label><br>
+                    <input type="radio" id="no" name="feedback" value="no">
+                    <label for="no">No</label><br>
+                    <input type="radio" id="maybe" name="feedback" value="maybe">
+                    <label for="maybe">Maybe</label>
+                </p>
+                <!--textarea-->
+                <p>
+                    <label for="comments">Additional Comments:</label><br>
+                    <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+                </p>
+                <!--datalist-->
+                <p>
+                    <label for="snacks">Preferred Snacks for Next Meeting:</label><br>
+                    <input list="snacks" id="snack" name="snack">
+                    <datalist id="snacks">
+                        <option value="Chips">
+                        <option value="Cookies">
+                        <option value="Fruit">
+                        <option value="Veggies">
+                    </datalist>
+                </p>
+                <!--select-->
+                <p>
+                    <label for="nextMeeting">Preferred Date for Next Meeting:</label><br>
+                    <select id="nextMeeting" name="nextMeeting">
+                        <option value="may">May 10, 2026</option>
+                        <option value="june">June 14, 2026</option>
+                        <option value="july">July 12, 2026</option>
+                    </select>
+                    
+                </p>
+                <!--button-->
+                <button type="submit">Submit Feedback</button>
+                <br><em><span style="color: red;"> *Required Field</span></em><br>
+            </fieldset>
+        </form>
+        
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Executive Board</p>
+        </footer>
+
+    </body>
+</html>
