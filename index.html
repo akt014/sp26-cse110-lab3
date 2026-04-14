@@ -103,17 +103,22 @@
 
             <section>
                 <h3>Video & Audio References</h3>
-                <label for="meetingVideo">Meeting Video:</label><br>
-                <video width="270" height="480" controls>
+                <!--Video--->
+                <figure>
+                    <figcaption>Meeting Video: Executive Board 4/13</figcaption>
+                    <video width="270" height="480" controls>
                     <source src="media/MioMovie.mp4" type="video/mp4">
                     Your browser does not support the video tag.
-                </video>
-                <br>
-                <label for="meeting-audio">Meeting Audio:</label><br>
-                <audio id="meeting-audio" controls>
-                    <source src="media/Clairo-Bags.mp3" type="audio/mp3">
-                    Your browser does not support the audio element.
-                </audio>
+                    </video>
+                </figure>
+                <!--Audio--->
+                <figure>
+                    <figcaption>Meeting Audio: Executive Board 4/13</figcaption>
+                    <audio id="meeting-audio" controls>
+                        <source src="media/Clairo-Bags.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </figure>
             </section>
             <section>
                 <h3>Adjournment</h3>
@@ -149,9 +154,9 @@
                 </p>
                 <!--datalist-->
                 <p>
-                    <label for="snacks">Preferred Snacks for Next Meeting:</label><br>
-                    <input list="snacks" id="snacks" name="snack">
-                    <datalist id="snacks">
+                    <label for="snacks-choice">Preferred Snacks for Next Meeting:</label><br>
+                    <input list="snacks-options" id="snack-choice" name="snack">
+                    <datalist id="snacks-options">
                         <option value="Chips">
                         <option value="Cookies">
                         <option value="Fruit">
