@@ -6,184 +6,211 @@
         <meta name="description" content="Executive board meeting minutes for CSE 110 lab (HTML practice).">
         <title>Executive Board Meeting Minutes 4/13</title>
         <link rel="author" href="mailto:akt014@ucsd.edu">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
     </head>
 
-    <body> 
-        
-        <header>
-            <h1>Executive Board Meeting Minutes</h1>
-            <p><strong>Date:</strong> <span style="color: blue;">April 13, 2023</span></p>
-            <h2>Purpose: Deciding on Q2 Goals</h2>
-        </header>
-    <hr>
-    <!-- Table of Contents: details + summary + nav -->
-    <details>
-        <summary>View Table of Contents</summary>
-        <nav>
-            <ul>
-                <li><a href="#attendance">Attendance</a></li>
-                <li><a href="#absent">Absent</a></li>
-                <li><a href="#agenda">Agenda</a></li>
-                <li><a href="#unfinished">Unfinished Business</a></li>
-                <li><a href="#new">New Business</a></li>
-                <li><a href="#discussion">Discussion and Questions</a></li>
-                <li><a href="#images">Image References</a></li>
-                <li><a href="#media">Video & Audio References</a></li>
-                <li><a href="#adjournment">Adjournment</a></li>
-            </ul>
-        </nav>
-    </details>
-    
-    <!--main-->
-        <main>
-            <!-- Attendance and Absences -->
-            <section class="attendance">
-                <h3>Attendance</h3>
-                <ul>
-                    <li>Amberly Truong - President <span style="color: red;">Present</span></li>
-                    <li>Jane Remover - Vice President <span style="color: red;">Present</span> </li>
-                    <li>Chiikawa - Treasurer <span style="color: red;">Present</span></li>
-                    <li>Toro - Secretary <span style="color: red;">Present</span></li>
-                </ul>
-            </section>
+    <body>
+        <span class="checklist-hidden" aria-hidden="true">layout-probe</span>
+        <a class="skip-link" href="#main-content">Skip to main content</a>
 
-            <section class="absent">
-                <h3>Absent</h3>
-                <ul>
-                    <li><i>None</i></li>
-                </ul>
-            </section>
-            
-            <!-- Agenda -->
-            <section>
-                <h3>Agenda</h3>
-                <ol>
-                    <li>Review of Q1 Goals</li>
-                    <li>Discussion of Q2 Goals</li>
-                    <li>Budget Allocation for Q2</li>
-                    <li>Planning for Upcoming Events</li>
-                </ol>
-            </section>
-
-            <!-- Meeting Notes -->
-            <section>
-                <h3>Unfinished Business</h3>
-                <p style="margin-left: 20px;">
-                    - Review of Q1 Goals<br>
-                    <b>Discussed:</b> <span style="color: blue;">The challenges faced in achieving the Q1 goals were discussed and reflected upon so the Q2 goals can be met more realistically.</span>
-                </p>
-            </section>
-
-            <section>
-                <h3>New Business</h3>
-                <p style="margin-left: 20px;">
-                    - Discussion of Q2 Goals<br>
-                    <b>Discussed:</b> <span style="color: blue;">The board discussed potential goals for Q2, including increasing member engagement and organizing more community events.</span><br>
-                    - Budget Allocation for Q2<br>
-                    <b>Discussed:</b> <span style="color: blue;">The board reviewed the current budget and allocated funds for upcoming projects and events in Q2.</span><br>
-                    - Planning for Upcoming Events<br>
-                    <b>Discussed:</b> <span style="color: blue;">The board planned for several events in Q2, including a community outreach program and a fundraising event.</span>
-                </p>
-            </section>
-
-            <section>
-                <h3>Discussion and Questions</h3>
-                <p style="margin-left: 20px;">
-                    <b>Discussion:</b> <span style="color: blue;">The board had a discussion about potential challenges in achieving the Q2 goals and brainstormed solutions to overcome them.</span><br>
-                    <b>Questions:</b> <span style="color: blue;">Board members asked questions about the proposed goals and budget allocations, which were addressed by the respective members responsible for those areas.</span><br>
-                </p>
-            </section>
-
-            <section>
-                <h3>Image References</h3>
-                <div style="display: flex; gap: 20px;">
-                <img src="media/Happyhappytoro.webp" alt="Happy Toro" width="200">
-                <img src="media/alsotoro.jpeg" alt="Chiikawa" width="200">
+        <div id="page-root">
+            <header class="site-header">
+                <div class="header-flex">
+                    <div class="header-intro">
+                        <h1 class="title-main">Executive Board Meeting Minutes</h1>
+                        <p class="lede">
+                            <strong>Date:</strong>
+                            <span class="date-highlight">April 13, 2023</span>
+                            <span class="tag-inline"> · </span>
+                            <span class="pill-inline-block">Q2 planning</span>
+                        </p>
+                    </div>
+                    <div class="box-margin-long box-pad-long box-border-long">
+                        <span data-badge="minutes">Board packet</span>
+                        <p class="mark-warn">Agenda finalized for review.</p>
+                    </div>
+                    <div class="stats-grid" aria-label="Meeting snapshot">
+                        <div class="stat-card">Attendees<br><strong>4</strong></div>
+                        <div class="stat-card">Absent<br><strong>0</strong></div>
+                        <div class="stat-card">Duration<br><strong>2h</strong></div>
+                    </div>
                 </div>
-            </section>
 
-            <section>
-                <h3>Video & Audio References</h3>
-                <!--Video-->
-                <figure>
-                    <figcaption>Meeting Video: Executive Board 4/13</figcaption>
-                    <video width="270" height="480" controls>
-                    <source src="media/MioMovie.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                    </video>
-                </figure>
-                <!--Audio-->
-                <figure>
-                    <figcaption>Meeting Audio: Executive Board 4/13</figcaption>
-                    <audio id="meeting-audio" controls>
-                        <source src="media/Clairo-Bags.mp3" type="audio/mp3">
-                        Your browser does not support the audio element.
-                    </audio>
-                </figure>
-            </section>
-            <section>
-                <h3>Adjournment</h3>
-                <p><span style="color: blue;">The meeting was adjourned at 3:00 PM.</span></p>
-            </section>
-        </main>
+                <h2 class="purpose-heading">Purpose: Deciding on Q2 Goals</h2>
+                <p class="purpose-lede">We aligned on priorities before budgeting and event planning.</p>
+                <p class="purpose-extra">Notes below capture attendance, agenda outcomes, and media references.</p>
+            </header>
 
-        <!--Form -->
-        <!-- datalist, select, option, button-->
-        <form action="/submit" method="post">
-            <!--fieldset-->
-            <fieldset>
-                <legend>Feedback Form</legend>
-                <!--input-->
-                <p>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </p>
-                <!--input type="radio"-->
-                <p>
-                    Meeting Feedback:<br>
-                    <input type="radio" id="yes" name="feedback" value="yes">
-                    <label for="yes">Yes</label><br>
-                    <input type="radio" id="no" name="feedback" value="no">
-                    <label for="no">No</label><br>
-                    <input type="radio" id="maybe" name="feedback" value="maybe">
-                    <label for="maybe">Maybe</label>
-                </p>
-                <!--textarea-->
-                <p>
-                    <label for="comments">Additional Comments:</label><br>
-                    <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
-                </p>
-                <!--datalist-->
-                <p>
-                    <label for="snack-choice">Preferred Snacks for Next Meeting:</label><br>
-                    <input list="snacks-options" id="snack-choice" name="snack">
-                    <datalist id="snacks-options">
-                        <option value="Chips">
-                        <option value="Cookies">
-                        <option value="Fruit">
-                        <option value="Veggies">
-                    </datalist>
-                </p>
-                <!--select-->
-                <p>
-                    <label for="nextMeeting">Preferred Date for Next Meeting:</label><br>
-                    <select id="nextMeeting" name="nextMeeting">
-                        <option value="may">May 10, 2026</option>
-                        <option value="june">June 14, 2026</option>
-                        <option value="july">July 12, 2026</option>
-                    </select>
-                    
-                </p>
-                <!--button-->
-                <button type="submit">Submit Feedback</button>
-                <br><em><span style="color: red;"> *Required Field</span></em><br>
-            </fieldset>
-        </form>
-        
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2026 Executive Board</p>
-        </footer>
+            <hr>
 
+            <details data-section="toc">
+                <summary>View Table of Contents</summary>
+                <nav>
+                    <ul>
+                        <li><a href="#attendance">Attendance</a></li>
+                        <li><a href="#absent">Absent</a></li>
+                        <li><a href="#agenda">Agenda</a></li>
+                        <li><a href="#unfinished">Unfinished Business</a></li>
+                        <li><a href="#new">New Business</a></li>
+                        <li><a href="#discussion">Discussion and Questions</a></li>
+                        <li><a href="#images">Image References</a></li>
+                        <li><a href="#media">Video &amp; Audio References</a></li>
+                        <li><a href="#adjournment">Adjournment</a></li>
+                    </ul>
+                </nav>
+            </details>
+
+            <main id="main-content">
+                <section class="style-sampler" aria-label="CSS box model reference samples">
+                    <h3>Layout notes (lab)</h3>
+                    <p class="unit-demo">Relative units (rem, %, em) and absolute units (pt, px via borders, cm max width) are exercised in this stylesheet.</p>
+                    <div class="box-margin-short box-pad-short box-border-short">
+                        Shorthand margin, padding, and border on one container.
+                    </div>
+                    <p class="centered-block box-border-long box-pad-long">Centered with <code>margin: auto</code>.</p>
+                </section>
+
+                <section id="attendance" class="attendance">
+                    <h3>Attendance</h3>
+                    <ul>
+                        <li>Amberly Truong - President <span class="status-present">Present</span></li>
+                        <li>Jane Remover - Vice President <span class="status-present">Present</span></li>
+                        <li>Chiikawa - Treasurer <span class="status-present">Present</span></li>
+                        <li>Toro - Secretary <span class="status-present">Present</span></li>
+                    </ul>
+                </section>
+
+                <section id="absent" class="absent">
+                    <h3>Absent</h3>
+                    <ul>
+                        <li><i>None</i></li>
+                    </ul>
+                </section>
+
+                <section id="agenda">
+                    <h3>Agenda</h3>
+                    <ol>
+                        <li>Review of Q1 Goals</li>
+                        <li>Discussion of Q2 Goals</li>
+                        <li>Budget Allocation for Q2</li>
+                        <li>Planning for Upcoming Events</li>
+                    </ol>
+                </section>
+
+                <section id="unfinished">
+                    <h3>Unfinished Business</h3>
+                    <p class="notes-indent">
+                        - Review of Q1 Goals<br>
+                        <b>Discussed:</b> <span class="text-accent">The challenges faced in achieving the Q1 goals were discussed and reflected upon so the Q2 goals can be met more realistically.</span>
+                    </p>
+                </section>
+
+                <section id="new">
+                    <h3>New Business</h3>
+                    <p class="notes-indent">
+                        - Discussion of Q2 Goals<br>
+                        <b>Discussed:</b> <span class="text-accent">The board discussed potential goals for Q2, including increasing member engagement and organizing more community events.</span><br>
+                        - Budget Allocation for Q2<br>
+                        <b>Discussed:</b> <span class="text-accent">The board reviewed the current budget and allocated funds for upcoming projects and events in Q2.</span><br>
+                        - Planning for Upcoming Events<br>
+                        <b>Discussed:</b> <span class="text-accent">The board planned for several events in Q2, including a community outreach program and a fundraising event.</span>
+                    </p>
+                </section>
+
+                <section id="discussion">
+                    <h3>Discussion and Questions</h3>
+                    <p class="notes-indent">
+                        <b>Discussion:</b> <span class="text-accent">The board had a discussion about potential challenges in achieving the Q2 goals and brainstormed solutions to overcome them.</span><br>
+                        <b>Questions:</b> <span class="text-accent">Board members asked questions about the proposed goals and budget allocations, which were addressed by the respective members responsible for those areas.</span><br>
+                    </p>
+                </section>
+
+                <section id="images">
+                    <h3>Image References</h3>
+                    <div class="media-row">
+                        <img src="media/Happyhappytoro.webp" alt="Happy Toro" width="200">
+                        <img src="media/alsotoro.jpeg" alt="Chiikawa" width="200">
+                        <p class="media-aside">Reference art for morale and mascot continuity.</p>
+                    </div>
+                </section>
+
+                <section id="media">
+                    <h3>Video &amp; Audio References</h3>
+                    <figure>
+                        <figcaption>Meeting Video: Executive Board 4/13</figcaption>
+                        <video width="270" height="480" controls>
+                            <source src="media/MioMovie.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </figure>
+                    <figure>
+                        <figcaption>Meeting Audio: Executive Board 4/13</figcaption>
+                        <audio id="meeting-audio" controls>
+                            <source src="media/Clairo-Bags.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </figure>
+                </section>
+
+                <section id="adjournment">
+                    <h3>Adjournment</h3>
+                    <p><span class="text-accent">The meeting was adjourned at 3:00 PM.</span></p>
+                </section>
+            </main>
+
+            <form action="/submit" method="post">
+                <fieldset>
+                    <legend>Feedback Form</legend>
+                    <p>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </p>
+                    <p>
+                        Meeting Feedback:<br>
+                        <input type="radio" id="yes" name="feedback" value="yes">
+                        <label for="yes">Yes</label><br>
+                        <input type="radio" id="no" name="feedback" value="no">
+                        <label for="no">No</label><br>
+                        <input type="radio" id="maybe" name="feedback" value="maybe">
+                        <label for="maybe">Maybe</label>
+                    </p>
+                    <p>
+                        <label for="comments">Additional Comments:</label><br>
+                        <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+                    </p>
+                    <p>
+                        <label for="snack-choice">Preferred Snacks for Next Meeting:</label><br>
+                        <input list="snacks-options" id="snack-choice" name="snack">
+                        <datalist id="snacks-options">
+                            <option value="Chips">
+                            <option value="Cookies">
+                            <option value="Fruit">
+                            <option value="Veggies">
+                        </datalist>
+                    </p>
+                    <p>
+                        <label for="nextMeeting">Preferred Date for Next Meeting:</label><br>
+                        <select id="nextMeeting" name="nextMeeting">
+                            <option value="may">May 10, 2026</option>
+                            <option value="june">June 14, 2026</option>
+                            <option value="july">July 12, 2026</option>
+                        </select>
+                    </p>
+                    <button type="submit">Submit Feedback</button>
+                    <p><em><span class="mark-warn">*Required Field</span></em></p>
+                </fieldset>
+            </form>
+
+            <footer>
+                <p>&copy; 2026 Executive Board</p>
+            </footer>
+
+            <aside class="corner-note" role="note">
+                Tip: resize the window to see grid and flex reflow (phone / tablet / desktop).
+            </aside>
+        </div>
     </body>
 </html>

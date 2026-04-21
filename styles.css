@@ -1,0 +1,485 @@
+/* =============================================================================
+   CSE 110 Lab — stylesheet checklist
+   Section comments group related requirements for easier grading / reading.
+   ============================================================================= */
+
+/* --- Universal selector + CSS variables (with fallback) + wider-gamut + color-mix --- */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /* CSS variable with fallback is demonstrated where used: var(--accent, orange) */
+    --accent: rgb(46, 125, 204);
+    --accent-soft: rgba(46, 125, 204, 0.12);
+    --surface: hsl(210, 40%, 98%);
+    --surface-muted: hsla(210, 25%, 92%, 0.95);
+    --text: #1a2332;
+    --text-inverse: #ffffff;
+    --radius-lg: 12px;
+    --font-sans: "DM Sans", system-ui, sans-serif;
+    --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --space-unit: 1rem;
+}
+
+/* --- Element selectors + nested selectors (native CSS nesting, 2023) --- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: static;
+    margin: 0;
+    font-family: var(--font-sans, system-ui, sans-serif);
+    color: var(--text, #222);
+    background-color: var(--surface-muted);
+    line-height: 1.55;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 56rem;
+    min-width: 16rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0.75rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    /* Nested selector block */
+    & > header {
+        margin-bottom: 1rem;
+    }
+
+    & > footer {
+        margin-top: 2rem;
+        text-align: center;
+
+        & p {
+            position: static;
+        }
+    }
+}
+
+/* --- Class selector --- */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background-color: hsl(212, 42%, 96%);
+    border-radius: var(--radius-lg);
+    /* color-mix for header tint */
+    background-color: color-mix(in srgb, hsl(212, 42%, 96%) 82%, var(--accent) 18%);
+
+    & .purpose-heading {
+        margin-bottom: 0.25rem;
+    }
+}
+
+/* --- ID selector --- */
+#page-root {
+    position: relative;
+}
+
+/* --- Attribute selector --- */
+[data-section="toc"] {
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+[data-badge="minutes"] {
+    display: inline-block;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.45rem;
+    border-radius: 999px;
+    background-color: var(--accent-soft);
+    color: var(--accent, orange);
+}
+
+.header-intro {
+    padding-right: 2vw;
+}
+
+.date-highlight {
+    color: rgba(30, 58, 95, 0.95);
+}
+
+.status-present {
+    color: rgb(200, 48, 48);
+    font-weight: 600;
+}
+
+.text-accent {
+    color: hsl(215, 85%, 38%);
+}
+
+.notes-indent {
+    display: block;
+    margin-left: 1.25rem;
+}
+
+.style-sampler {
+    max-width: min(12cm, 100%);
+}
+
+/* --- Combining selectors (element.class) --- */
+section.attendance {
+    border-top: 3px solid rgba(46, 125, 204, 0.25);
+}
+
+h1.title-main {
+    font-family: var(--font-serif, Georgia, serif);
+    font-weight: 600;
+    margin: 0;
+    /* hex short form */
+    color: #1e3a5f;
+    text-align: left;
+}
+
+/* --- Selector list (element, element) --- */
+h2,
+h3 {
+    font-family: var(--font-serif, Georgia, serif);
+    color: hsl(215, 45%, 22%);
+    text-decoration: underline;
+    text-decoration-color: rgba(46, 125, 204, 0.35);
+    text-underline-offset: 0.18em;
+}
+
+/* --- Text: color, text-decoration, text-align --- */
+p.lede {
+    color: rgb(33, 48, 66);
+    text-align: justify;
+    text-decoration: none;
+}
+
+/* Named color example */
+.mark-warn {
+    color: orange;
+}
+
+/* display: none (checklist: removes element from layout) */
+.checklist-hidden {
+    display: none;
+}
+
+/* visually skip link until keyboard focus */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    background: navy;
+    color: white;
+    z-index: 100;
+}
+
+/* --- Descendant combinator (element element) --- */
+main section {
+    background-color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+/* --- Child combinator (main > section) --- */
+main > section {
+    border-radius: 10px;
+    padding: 1rem 1rem 1.1rem;
+}
+
+/* --- Adjacent sibling combinator (h2 + p) --- */
+h2 + p {
+    margin-top: 0.35rem;
+    color: hsla(215, 30%, 30%, 0.95);
+}
+
+/* --- General sibling combinator (h2 ~ p) --- */
+h2 ~ p {
+    max-width: 42rem;
+}
+
+/* --- :has() relational selector --- */
+section:has(figure) {
+    border-left: 4px solid var(--accent, orange);
+    padding-left: 0.85rem;
+}
+
+section:has(video) {
+    background-color: rgba(46, 125, 204, 0.06);
+}
+
+/* --- Pseudo-class selectors (examples include a:hover, button:active) --- */
+a:hover {
+    color: rgb(38, 114, 217);
+    color: color(display-p3 0.15 0.45 0.85);
+    text-decoration-thickness: 2px;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+main > section p:hover {
+    transition: color 0.15s ease;
+    color: hsl(215, 35%, 28%);
+}
+
+/* --- Flexbox: >2 children, 3+ flex properties --- */
+.header-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+}
+
+.header-flex > * {
+    flex: 1 1 12rem;
+}
+
+/* --- Grid: >2 children, 3+ grid properties --- */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.65rem;
+    justify-items: stretch;
+    align-items: stretch;
+    margin-top: 0.75rem;
+}
+
+.stat-card {
+    background: #f7f9fc;
+    border-radius: 8px;
+    padding: 0.55rem 0.6rem;
+    text-align: center;
+    font-size: 0.9rem;
+    min-height: 3.25rem;
+    width: 100%;
+}
+
+/* --- Box model: margin longhand --- */
+.box-margin-long {
+    margin-top: 0.5rem;
+    margin-right: 0.25rem;
+    margin-bottom: 0.75rem;
+    margin-left: 0.25rem;
+}
+
+/* --- Box model: margin shorthand --- */
+.box-margin-short {
+    margin: 0.4rem 0.6rem 0.6rem 0.4rem;
+}
+
+/* --- margin: auto --- */
+.centered-block {
+    display: block;
+    width: fit-content;
+    margin: auto;
+}
+
+/* --- Padding longhand --- */
+.box-pad-long {
+    padding-top: 0.6rem;
+    padding-right: 0.75rem;
+    padding-bottom: 0.6rem;
+    padding-left: 0.75rem;
+}
+
+/* --- Padding shorthand --- */
+.box-pad-short {
+    padding: 0.5rem 0.75rem 0.65rem 0.75rem;
+}
+
+/* --- Borders: longhand properties --- */
+.box-border-long {
+    border-style: solid;
+    border-color: rgb(46, 125, 204);
+    border-width: 1px;
+    border-radius: 8px;
+}
+
+/* --- Borders shorthand --- */
+.box-border-short {
+    border: 2px dashed hsl(28, 85%, 42%);
+    border-radius: 6px;
+}
+
+/* --- Sizing: height, width, max-width, min-width --- */
+.media-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.media-row img {
+    width: 200px;
+    max-width: 100%;
+    min-width: 120px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.media-aside {
+    flex: 1 1 14rem;
+    margin: 0;
+    font-size: 0.9rem;
+    color: hsl(215, 20%, 35%);
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- Display experiments: block, inline-block, inline --- */
+.tag-inline {
+    display: inline;
+    font-weight: 600;
+}
+
+.pill-inline-block {
+    display: inline-block;
+    padding: 0.15rem 0.45rem;
+    border-radius: 999px;
+    background: lavender;
+}
+
+/* --- Position: relative + fixed (two of the required set) --- */
+.corner-note {
+    position: fixed;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    width: 9.5rem;
+    padding: 0.45rem 0.55rem;
+    font-size: 0.78rem;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid #ccd6e4;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    z-index: 30;
+}
+
+main {
+    position: relative;
+}
+
+/* --- Form --- */
+form[action="/submit"] {
+    display: block;
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+fieldset {
+    border: 1px solid #cfd8e6;
+    border-radius: 10px;
+}
+
+button[type="submit"] {
+    display: inline-block;
+    padding: 0.45rem 0.9rem;
+    border-radius: 8px;
+    border: 1px solid var(--accent, orange);
+    background: var(--accent, orange);
+    color: var(--text-inverse);
+    font-family: var(--font-sans);
+    cursor: pointer;
+}
+
+/* --- Units showcase (3 relative + 3 absolute) ---
+   Relative: rem, %, em  |  Absolute: px, pt, cm --- */
+.unit-demo {
+    font-size: 0.95rem;
+    width: 92%;
+    max-width: 100%;
+    margin: 0.5rem 0;
+    padding: 9pt 12pt;
+    border-left: 3px solid #2e7dcc;
+    padding-left: 1.2em;
+    min-height: 3rem;
+}
+
+/* --- hr --- */
+hr {
+    border: none;
+    border-top: 1px solid #d5deea;
+    margin: 1rem 0;
+}
+
+/* --- details / nav --- */
+details {
+    padding: 0.5rem 0.75rem;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.35rem 0.75rem;
+    list-style: none;
+    padding: 0;
+    margin: 0.25rem 0 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--accent, orange);
+}
+
+/* --- Responsiveness: width-based media queries --- */
+@media (max-width: 36rem) {
+    body {
+        padding-left: 0.65rem;
+        padding-right: 0.65rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header-flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .corner-note {
+        position: static;
+        width: 100%;
+        margin-top: 0.75rem;
+    }
+}
+
+@media (min-width: 36.01rem) and (max-width: 60rem) {
+    body {
+        max-width: 42rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 60.01rem) {
+    body {
+        max-width: 56rem;
+    }
+}
